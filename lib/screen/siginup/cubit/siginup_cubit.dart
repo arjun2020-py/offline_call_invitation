@@ -18,6 +18,7 @@ class SiginupCubit extends Cubit<SiginupState> {
 
   registerUser() async {
     try {
+      //register the app with firebase register 
       FirebaseAuth.instance
           .createUserWithEmailAndPassword(
               email: emailCtr.text.trim(), password: passwordCtr.text.trim())

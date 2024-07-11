@@ -15,6 +15,8 @@ class LoginCubit extends Cubit<LoginState> {
 
   loginUser() async {
     try {
+
+      // login app with firebase login method.
       FirebaseAuth.instance
           .signInWithEmailAndPassword(
               email: emailCtr.text.trim(), password: passwordCtr.text.trim())
